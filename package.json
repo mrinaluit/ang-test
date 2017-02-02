@@ -1,0 +1,23 @@
+{
+  "name": "ang-test",
+  "version": "1.0.0",
+  "description": "testing apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "mrinaluit"
+  },
+  "keywords": [
+    "angularjs",
+    "js",
+    "HTML5",
+    "CSS3",
+    "RWD",
+    "jQuery"
+  ],
+  "author": "Mrinal Mondal",
+  "license": "ISC"
+}
