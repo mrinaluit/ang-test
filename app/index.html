@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Angular Apps</title>
+<link rel="stylesheet" href="css/style.css">    
+</head>
+<body>
+
+
+
+
+<!--
+<div style="position:relative; background:red; text-align:center; width: 40px;height: 40px; ">ss2</div>
+<div style="position:absolute; background:green; text-align:center; width: 40px;height: 100px; ">ss</div>
+<div style="position:relative; background:red; text-align:center; width: 40px;height: 40px; ">ss2</div>
+ -->
+
+    <div class="container"  ng-controller="TodoListController">
+
+
+     <select ng-model="myValue" ng-options="todo.text as todo.text for todo in todos">
+     </select> 
+
+
+
+
+     <div ng-switch="myValue">
+     <div ng-switch-when="xyz" style="background:orange"> I am 20</div>
+     <div ng-switch-when="mnc" style="background:pink">I am 23</div>
+     <div ng-switch-when="zyc" style="background:green">I am 25</div>
+     <div ng-switch-default style="background:yellow">I am default</div>
+     </div>
+
+     <h1>&nbsp;</h1>
+
+     <my-directive></my-directive>
+
+     <h1>&nbsp;</h1>
+
+    <!-- Great Code -->
+    <div ng-repeat="product in products"> 
+    <div ng-click="setItem($event)" style="" ng-class="$odd ? 'redColor' : 'greenColor'">+ {{$even}} {{product.name}}{{product.price}}</div>
+    <div ng-repeat="innerItem in product.sub track by $index" style="display: none;">{{innerItem.name}} {{innerItem.price}}</div> 
+    </div> 
+    <!-- Great code  I love this code -->
+
+    
+    <h2>Welcome Mrinal</h2>
+    <a ui-sref="home" style="cursor: pointer;">Home</a>
+    <a ui-sref="about" style="cursor: pointer;">About</a>
+    <div ui-view></div>
+
+
+    <div class="clear"></div>
+    </div> 
+
+    
+
+
+
+
+
+<!-- 
+    <div style=" position:absolute; background:red; text-align:center; width: 200px;height: 200px; left:50%; top: 50%; transform: translate(-50%,-50%);">
+   <div style="position:absolute; background:green; text-align:center; width: 40px;height: 40px; ">ss</div>
+    </div> -->
+
+
+
+
+
+<!--      <table>
+     <tr  ng-repeat="product in products"><th>{{product.name}}</th><th>{{product.price}}</th>
+     <td  ng-repeat="innerItem in product.sub">{{innerItem.name}}</td>
+     </tr>
+     </table>
+ -->
+
+
+      <!-- <form name="f1" ng-submit="submitted = true" novalidate>
+      <input type="text" name="user" ng-model="user" required>
+      <span style="color: red" ng-show="f1.$submitted && f1.user.$invalid">
+      <span ng-show="f1.user.$error.required">User name is required.</span> 
+      </span>
+
+      <div>&nbsp;</div>
+
+      <input type="email" name="email" ng-model="email" required>
+      <span style="color:red" ng-show="f1.$submitted && f1.email.$invalid">
+      <span ng-show="f1.email.$error.required">Email is required.</span>
+      <span ng-show="f1.email.$error.email">Invalid email address.</span>
+      </span>
+
+      <div>&nbsp;</div>
+
+      <input type="submit" value="submit" ng-click="f1.$valid && save()" >
+      </form>
+
+      <div style="display: block;">test</div> mmmm
+
+    </div> -->
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
