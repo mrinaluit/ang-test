@@ -1,0 +1,26 @@
+<h1> HOME </h1>
+<p>I am at Home. This is my first ui-router page set up.Testing..</p>
+
+
+     <select ng-model="myValue">
+     <option value="">Select</option>
+       <option ng-repeat="todo in todos">{{todo.text}}</option>
+     </select>
+
+
+     <div ng-switch="myValue">
+     <div ng-switch-when="xyz" style="background:orange"> I am 20</div>
+     <div ng-switch-when="mnc" style="background:pink">I am 23</div>
+     <div ng-switch-when="zyc" style="background:green">I am 25</div>
+     <div ng-switch-default style="background:yellow">I am default</div>
+     </div>
+
+
+     <h1>&nbsp;</h1>
+
+    <!-- Great Code -->
+    <div ng-repeat="product in products"> 
+     <div ng-click="setItem($event)" style="" ng-class="$odd ? 'redColor' : 'greenColor'">+ {{$even}} {{product.name}}{{product.price}}</div>
+     <div ng-repeat="innerItem in product.sub track by $index" style="display: none;">{{innerItem.name}} {{innerItem.price}}</div> 
+     </div> 
+    <!-- Great code  I love this code -->
